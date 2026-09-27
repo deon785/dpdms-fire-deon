@@ -1,0 +1,5 @@
+spring: { application: { name: DASHBOARD-SERVICE } }
+server: { port: 8091 }
+dpdms: { gateway-secret: "${GATEWAY_SECRET:dpdms-gateway-dev-secret-please-change}" }
+management: { endpoints: { web: { exposure: { include: health,info,metrics } } } }
+eureka: { client: { serviceUrl: { defaultZone: "${EUREKA_URL:http://localhost:8761/eureka/}" } } }
